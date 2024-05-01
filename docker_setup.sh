@@ -12,11 +12,6 @@ docker rm shtaaa_pss_extraction
 nvidia-docker run -d --restart unless-stopped --name shtaaa_pss_extraction \
 -v /allen/programs/celltypes/workgroups/em-connectomics/analysis_group/forSharmi/code/Dockertest_github:/usr/local/test \
 -v /allen:/usr/local/allen \
--e AWS_ACCESS_KEY_ID=AKIAZE5KZHQ3L56GWEON \
--e AWS_SECRET_ACCESS_KEY=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  \
--e AWS_DEFAULT_REGION=us-west-2 \
--p 9780:9780 \
--e "PASSWORD=$JUPYTERPASSWORD" \
 -e DISPLAY \
 --privileged \
 -i -t shtaaa/pss_extraction  \
